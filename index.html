@@ -3,60 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Introduction to HTML5 - PLP Web Technologies Classroom July 2025" />
-  <meta name="keywords" content="HTML5, Web Development, PLP Classroom, GitHub Classroom" />
-  <meta name="author" content="PLP Web Technologies Classroom" />
-  <title>Introduction to HTML5 | PLP Web Technologies</title>
+  <meta name="description" content="A multi-section HTML5 demo page showcasing lists, tables, media, and a validated form." />
+  <meta name="keywords" content="HTML5, form validation, media, tables, lists, accessibility" />
+  <meta name="author" content="Seif | PLP Web Technologies Classroom" />
+  <title>HTML5 Showcase Page</title>
 </head>
 <body>
   <header>
-    <h1>Introduction to HTML5</h1>
-    <nav aria-label="Main navigation">
+    <h1>Welcome to My HTML5 Showcase</h1>
+    <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#footer">Footer</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">Contact Form</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About This Repository</h2>
-      <p>
-        <strong>plp-webtechnologies-classroom-july2025</strong> is a GitHub Classroom project created for the July 2025 cohort. It introduces learners to HTML5 fundamentals through hands-on activities and structured learning.
-      </p>
-    </section>
-
-    <section id="resources">
-      <h2>Resources</h2>
-      <article>
-        <h3>Readme</h3>
-        <p>Contains setup instructions and project overview.</p>
-      </article>
-      <article>
-        <h3>Activity</h3>
-        <p>Includes exercises to practice semantic HTML and accessibility.</p>
-      </article>
-      <article>
-        <h3>Custom Properties</h3>
-        <p>Explore CSS variables and how they enhance styling flexibility.</p>
-      </article>
-    </section>
-
-    <aside>
-      <h2>Repository Stats</h2>
+    <!-- Section: Lists and Tables -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <h3>Technologies Covered</h3>
       <ul>
-        <li>⭐ Stars: 0</li>
-        <li>👀 Watchers: 0</li>
-        <li>🍴 Forks: 0</li>
+        <li>HTML5 Semantic Tags</li>
+        <li>Accessibility Best Practices</li>
+        <li>Native Form Validation</li>
       </ul>
-    </aside>
+
+      <h3>Course Schedule</h3>
+      <table border="1">
+        <caption>PLP Web Technologies - July 2025</caption>
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Topic</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Introduction to HTML5</td>
+            <td>Build a semantic page</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Forms & Accessibility</td>
+            <td>Create a validated form</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section: Media -->
+    <section id="media">
+      <h2>Featured Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Placeholder image of a web layout" />
+        <figcaption>Sample layout using semantic HTML5</figcaption>
+      </figure>
+
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <video width="400" controls>
+        <source src="sample-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section: Form -->
+    <section id="form">
+      <h2>Contact Me</h2>
+      <form action="/submit" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required minlength="3" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0712345678" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Feedback</legend>
+
+          <label for="topic">Topic:</label>
+          <select id="topic" name="topic" required>
+            <option value="">--Select--</option>
+            <option value="html">HTML5</option>
+            <option value="accessibility">Accessibility</option>
+            <option value="forms">Forms</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" minlength="10" required></textarea>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
 
-  <footer id="footer">
-    <p>&copy; 2025 PLP Web Technologies Classroom</p>
-    <p><a href="#top" aria-label="Back to top">Back to top</a></p>
+  <footer>
+    <p>&copy; 2025 Seif | PLP Web Technologies Classroom</p>
+    <p><a href="#top">Back to top</a></p>
   </footer>
 </body>
 </html>
